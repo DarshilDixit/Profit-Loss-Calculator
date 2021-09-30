@@ -15,23 +15,27 @@ function clickHandler() {
 };
 
 function calculateProfitAndLoss(initial, quantity, current){
-    if (initial > current) {
-        var loss = (initial - current) * quantity;
-        var lossPercentage = (loss / initial) * 100;
-    
-        showOutput(
-          "Loss is " + loss + " and" + " the loss percentage is " + lossPercentage + "%"
-        );
-      } else if (current > initial) {
-        var profit = (current - initial) * quantity;
-        var profitPercentage = (profit / initial) * 100;
-    
-        showOutput(
-            "profit is " + profit + " and" + "  the profit percentage is " + profitPercentage +"%."
-        );
-      } else {
-        showOutput(`No pain no gain and no gain no pain`);
-      }
+    if( initial && quantity){
+        if (initial > current) {
+            var loss = (initial - current) * quantity;
+            var lossPercentage = (loss / initial) * 100;
+        
+            showOutput(
+              "Loss is " + loss + " and" + " the loss percentage is " + lossPercentage + "%"
+            );
+          } else if (current > initial) {
+            var profit = (current - initial) * quantity;
+            var profitPercentage = (profit / initial) * 100;
+        
+            showOutput(
+                "profit is " + profit + " and" + "  the profit percentage is " + profitPercentage +"%."
+            );
+          } else {
+            showOutput(`No pain no gain and no gain no pain`);
+          }
+    }else{
+        showOutput("Please enter all the fields.")
+    }
 }
 
 function showOutput(message) {
