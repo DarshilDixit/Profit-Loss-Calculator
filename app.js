@@ -31,10 +31,10 @@ function calculateProfitAndLoss(initial, quantity, current){
                 "profit is " + profit + " and" + "  the profit percentage is " + profitPercentage +"%."
             );
           } else {
-            showOutput(`No pain no gain and no gain no pain`);
+            showOutput("No Pain No Gain And No Gain No Pain");
           }
     }else{
-        showOutput("Please enter all the fields.")
+        showOutput("Please Enter All The Fields.")
     }
 }
 
