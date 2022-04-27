@@ -11,12 +11,11 @@ function clickHandler() {
     var qty = Number(stocksQuantity.value);
     var cp = Number(currentPrice.value);
     
-    var totalIp = ip * qty
-
     calculateProfitAndLoss(ip, qty, cp)
 };
 
 function calculateProfitAndLoss(initial, quantity, current){
+       var totalIp = ip * qty
     if( initial && quantity){
         if (initial > current) {
             var loss = (initial - current) * quantity;
