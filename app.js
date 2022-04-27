@@ -10,6 +10,8 @@ function clickHandler() {
     var ip = Number(initialPrice.value);
     var qty = Number(stocksQuantity.value);
     var cp = Number(currentPrice.value);
+    
+    var totalIp = ip * qty
 
     calculateProfitAndLoss(ip, qty, cp)
 };
@@ -18,14 +20,14 @@ function calculateProfitAndLoss(initial, quantity, current){
     if( initial && quantity){
         if (initial > current) {
             var loss = (initial - current) * quantity;
-            var lossPercentage = (loss / initial) * 100;
+            var lossPercentage = (loss / totalIp) * 100;
         
             showOutput(
               "Loss is " + loss + " and" + " the loss percentage is " + lossPercentage + "%"
             );
           } else if (current > initial) {
             var profit = (current - initial) * quantity;
-            var profitPercentage = (profit / initial) * 100;
+            var profitPercentage = (profit / totalIp) * 100;
         
             showOutput(
                 "profit is " + profit + " and" + "  the profit percentage is " + profitPercentage +"%."
