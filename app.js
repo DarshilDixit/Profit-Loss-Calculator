@@ -15,7 +15,7 @@ function clickHandler() {
 };
 
 function calculateProfitAndLoss(initial, quantity, current){
-       var totalIp = ip * qty
+       var totalIp = initial * quantity
     if( initial && quantity){
         if (initial > current) {
             var loss = (initial - current) * quantity;
